@@ -8,18 +8,10 @@ defmodule Reducer do
     end
 
     defp remove([head | tail]) do
-        multiply(tail)
-    end
-
-    defp multiply([head | tail]) do
-        [head * 3 | remove(tail)]
+        reduce(tail)
     end
 
     defp remove([]) do
-        []
-    end
-
-    defp multiply([]) do
         []
     end
 
